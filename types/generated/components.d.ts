@@ -12,10 +12,24 @@ export interface ButtonsCta extends Struct.ComponentSchema {
   };
 }
 
+export interface StatisticsStat extends Struct.ComponentSchema {
+  collectionName: 'components_statistics_stats';
+  info: {
+    displayName: 'stat';
+    icon: 'chartCircle';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'buttons.cta': ButtonsCta;
+      'statistics.stat': StatisticsStat;
     }
   }
 }

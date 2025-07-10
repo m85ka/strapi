@@ -37,6 +37,15 @@
       "type": "component",
       "repeatable": false,
       "component": "buttons.cta"
+    },
+    "heroSecondaryText": {
+      "type": "string"
+    },
+    "stat": {
+      "displayName": "stat",
+      "type": "component",
+      "repeatable": true,
+      "component": "statistics.stat"
     }
   }
 }

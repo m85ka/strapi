@@ -392,6 +392,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     heroBackground: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     heroCTA: Schema.Attribute.Component<'buttons.cta', false>;
     heroHeadline: Schema.Attribute.String;
+    heroSecondaryText: Schema.Attribute.String;
     heroSubheadline: Schema.Attribute.Text;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
@@ -399,6 +400,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       'api::homepage.homepage'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    stat: Schema.Attribute.Component<'statistics.stat', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
