@@ -392,7 +392,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     heroBackground: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     heroCTA: Schema.Attribute.Component<'buttons.cta', false>;
     heroHeadline: Schema.Attribute.String;
-    heroSubheadline: Schema.Attribute.String;
+    heroSubheadline: Schema.Attribute.Text;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
