@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_buttons_ctas",
+  "info": {
+    "displayName": "CTA",
+    "icon": "rocket"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}
