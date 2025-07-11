@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_services_services",
+  "info": {
+    "displayName": "Service",
+    "icon": "shield"
+  },
+  "options": {},
+  "attributes": {
+    "class": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "features": {
+      "displayName": "features",
+      "type": "component",
+      "repeatable": true,
+      "component": "service-features.features"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "requirements": {
+      "type": "string"
+    }
+  }
+}

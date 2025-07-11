@@ -400,6 +400,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       'api::homepage.homepage'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    services: Schema.Attribute.Component<'services.service', true>;
     stat: Schema.Attribute.Component<'statistics.stat', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

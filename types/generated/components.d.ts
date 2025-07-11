@@ -12,6 +12,33 @@ export interface ButtonsCta extends Struct.ComponentSchema {
   };
 }
 
+export interface ServiceFeaturesFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_service_features_features';
+  info: {
+    displayName: 'features';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface ServicesService extends Struct.ComponentSchema {
+  collectionName: 'components_services_services';
+  info: {
+    displayName: 'Service';
+    icon: 'shield';
+  };
+  attributes: {
+    class: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    duration: Schema.Attribute.String;
+    features: Schema.Attribute.Component<'service-features.features', true>;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    requirements: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface StatisticsStat extends Struct.ComponentSchema {
   collectionName: 'components_statistics_stats';
   info: {
@@ -29,6 +56,8 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'buttons.cta': ButtonsCta;
+      'service-features.features': ServiceFeaturesFeatures;
+      'services.service': ServicesService;
       'statistics.stat': StatisticsStat;
     }
   }
